@@ -1,0 +1,8 @@
+{
+    "python.analysis.extraPaths": [
+        "./schoolsystem"
+    ],
+    "cSpell.words": [
+        "Studentserializer"
+    ]
+}
