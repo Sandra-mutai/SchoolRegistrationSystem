@@ -3,6 +3,7 @@ from django.db import models
 from django.http import response
 from django.test import TestCase
 from .models import Student
+from django.urls import reverse
 import datetime
 
 
@@ -26,11 +27,11 @@ def test_year_of_birth(self):
     year=datetime.datetime.now().year-self.student.age
     self.assertEqual(year,self.student.year_of_birth())
 
-def test_student_registration_view(student):
+def test_student_registration_view(self):
     self.data={"first_name": self.student.first_name,
                "last_name":self.student.last_name,
                "age":self.student.age  }
 
     url=reverse("register_student")
     response=self.Client.post(url,self.data)
-    self.assertEqual(response_status_code,200)
+    self.assertEqual(response.status_code,200)
