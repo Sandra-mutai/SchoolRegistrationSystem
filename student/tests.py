@@ -1,6 +1,4 @@
 from _typeshed import Self
-from django.db import models
-from django.http import response
 from django.test import TestCase
 from .models import Student
 from django.urls import reverse
