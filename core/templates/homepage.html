@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id="navbar">
+        <h1>Welcome to school System</h1>
+        <li>
+            <ul>Home</ul>
+            <ul>Student</ul>
+            <ul>Trainer</ul>
+            <ul>courses</ul>
+            <ul>Events</ul>
+            <ul>Calender</ul>
+        </li> -->   
+        <section>
+        <div class="container">
+            <header>
+                <a href="#logo.png" class="logo">akiraChix </a>
+
+                <!-- <ul>
+                    <li><a href="student_list">Student</a></li>
+                    <li><a href="register_trainer.html">Trainer</a></li>
+                    <li><a href="register_courses.html">Courses</a></li>
+                    <li><a href="register_calender.html">Calender</a></li>
+
+                   </ul> -->
+
+
+                   <ul>
+                    <li> <a href="{% url 'register_student'%}" class="menu-btn">Student</a></li>
+                    <li><a href="{% url 'register_trainer'%}" class="menu-btn">Trainer</a></li>
+                    <li><a href="{% url 'register_courses'%}" class="menu-btn">Courses</a></li>
+                    <li><a href="{% url 'register_calender'%}" class="menu-btn">Calender</a></li>
+                </ul>
+
+                   </header>
+        <div class="content">
+                    <h2>Welcome to</h2>
+                    <p>akiraChix registration form</p>
+                    <a href="https://akirachix.com/">Read more</a>
+        </div>
+          </div>
+
+        </div>
+ </section>
+<style>
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(logo.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 50px;
+    background-color: purple;
+}
+.container{
+    position: relative;
+    width: calc(100% - 100px);
+    min-height: 300px;
+    background: rgba(255,255,255,0.5);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+}
+header{
+    position: absolute;
+    top: -40px;
+    right: 20px;
+    left: 20px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.5);
+    box-shadow: 0 15px 35px rgba(107, 57, 57, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+}
+header.logo{
+    color: chocolate;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+}
+header ul{
+    display: flex;
+}
+header ul li{
+    list-style: none;
+    margin: 0 10px;
+}
+header ul li a{
+    text-decoration: none;
+    font-weight: 500;
+    color: purple;
+    padding: 8px 15px;
+    border-radius: 25px ;
+}
+header ul li a:hover,
+header ul li a.active
+{
+    background-color: cornsilk;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.content{
+    transform: translateX(-100px);
+    max-width: 700px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.01);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    padding: 40px;
+    padding-left: 110px;
+    margin-top: 20px;
+    margin-left: 170px;
+}
+.content h2{
+    font-size: 3em;
+    color: #8a2435;
+}
+.content p{
+    font-size: 1.2em;
+    color: #8a2435;
+}
+.content a{
+    display: inline-block;
+    padding: 15px 30px;
+    background: wheat;
+    color: #8a2435;
+    margin-top: 20px;
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+
+  }
+ 
+  .imgBx img{
+      max-width: 400px;
+      animation: animate 5s linear infinite;
+  }
+  @keyframes animate{
+     0%,100%
+     {
+        transform: translateY(50px);
+     }
+     50%
+    {
+         transform: translateY(100px);
+}
+  }
+  .sci{
+      position: absolute;
+      right: -25px;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+  .sci li{
+      list-style: none;
+}
+.sci li a{
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    background: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 5px 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+
+}
+.sci li a img{
+    transform: scale(0.6);
+    transform: 0.5s;
+}
+.sci li:hover a img{
+    transform: scale(0.6) rotate(360);
+}
+</style>
+</body>
+</html>
