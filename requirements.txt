@@ -19,8 +19,11 @@ idna==3.2
 jedi==0.17.2
 parso==0.7.1
 Pillow==8.3.1
+pkg_resources==0.0.0
 pluggy==1.0.0
+psycopg2-binary==2.9.1
 pyinstaller==4.5.1
+psycopg2==2.9.1
 pyinstaller-hooks-contrib==2021.3
 python-jsonrpc-server==0.4.0
 python-language-server==0.36.2
