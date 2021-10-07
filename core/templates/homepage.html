@@ -7,35 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <div id="navbar">
-        <h1>Welcome to school System</h1>
-        <li>
-            <ul>Home</ul>
-            <ul>Student</ul>
-            <ul>Trainer</ul>
-            <ul>courses</ul>
-            <ul>Events</ul>
-            <ul>Calender</ul>
-        </li> -->   
         <section>
         <div class="container">
             <header>
                 <a href="#logo.png" class="logo">akiraChix </a>
 
-                <!-- <ul>
-                    <li><a href="student_list">Student</a></li>
-                    <li><a href="register_trainer.html">Trainer</a></li>
-                    <li><a href="register_courses.html">Courses</a></li>
-                    <li><a href="register_calender.html">Calender</a></li>
-
-                   </ul> -->
 
 
                    <ul>
                     <li> <a href="{% url 'register_student'%}" class="menu-btn">Student</a></li>
                     <li><a href="{% url 'register_trainer'%}" class="menu-btn">Trainer</a></li>
                     <li><a href="{% url 'register_courses'%}" class="menu-btn">Courses</a></li>
-                    <li><a href="{% url 'register_calender'%}" class="menu-btn">Calender</a></li>
+
                 </ul>
 
                    </header>
