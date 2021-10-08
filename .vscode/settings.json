@@ -1,9 +1,0 @@
-{
-    "python.analysis.extraPaths": [
-        "./schoolsystem"
-    ],
-    "cSpell.words": [
-        "Rwandese",
-        "Studentserializer"
-    ]
-}
