@@ -14,12 +14,31 @@
 
 
 
-                   <ul>
+                   <!-- <ul>
                     <li> <a href="{% url 'register_student'%}" class="menu-btn">Student</a></li>
                     <li><a href="{% url 'register_trainer'%}" class="menu-btn">Trainer</a></li>
                     <li><a href="{% url 'register_courses'%}" class="menu-btn">Courses</a></li>
+                   </ul> -->
 
-                </ul>
+
+                   <div class="dropdown">
+                    <!-- <button class="dropbtn">Student</button> -->
+                <ul>
+                    <li> <a href="{% url 'register_student'%}" class="dropbtn">Student</a></li>
+                    <li> <a href="{% url 'register_trainer'%}" class="dropbtn">Trainer</a></li>
+                    <li> <a href="{% url 'register_courses'%}" class="dropbtn">Courses</a></li>
+                    <li> <a href="{% url 'register_calender'%}" class="dropbtn">Calender</a></li>
+
+
+             </ul>
+
+                    <div class="dropdown-content">
+                      <a href="{% url 'student_list'%}">student_list</a>
+                      <a href="{% url 'courses_list'%}">courses_list</a>
+
+
+                    </div>
+                  </div>
 
                    </header>
         <div class="content">
@@ -74,12 +93,13 @@ header{
     border-top: 1px solid rgba(255,255,255,0.5);
     border-left: 1px solid rgba(255,255,255,0.5);
 }
-header.logo{
+/* header.logo{
     color: chocolate;
     font-weight: 700;
     text-decoration: none;
     font-size: 2em;
 }
+*/
 header ul{
     display: flex;
 }
@@ -100,6 +120,7 @@ header ul li a.active
     background-color: cornsilk;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
+
 .content{
     transform: translateX(-100px);
     max-width: 700px;
@@ -135,7 +156,7 @@ header ul li a.active
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 
   }
- 
+
   .imgBx img{
       max-width: 400px;
       animation: animate 5s linear infinite;
@@ -150,6 +171,7 @@ header ul li a.active
          transform: translateY(100px);
 }
   }
+  
   .sci{
       position: absolute;
       right: -25px;
@@ -180,7 +202,53 @@ header ul li a.active
 }
 .sci li:hover a img{
     transform: scale(0.6) rotate(360);
+}  
+
+
+
+/* Dropdown Button */
+/* .dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+} */
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: hsl(60, 38%, 85%);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 10px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color:rgb(189, 189, 223);}
+
+/* Show the dropdown menu on hover */
+/* .dropdown:hover .dropdown-content {display: block;} */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: plum;}
+
+
 </style>
 </body>
 </html>
